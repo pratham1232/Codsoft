@@ -1,0 +1,234 @@
+* {
+    margin: 0;
+    padding: 0;
+    color: rgb(230, 241, 231);
+    font-family: sans-serif;
+    overflow-x: hidden;
+    overflow-y:hidden
+}
+:root{
+    --my:linear-gradient(rgb(27, 187, 59), rgb(4, 149, 38), rgb(138, 180, 109), green);
+}
+
+.nav{
+    margin: 30px;
+    padding: 2px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /* gap: 350px; */
+    justify-content: space-between;
+}
+.nav ul{
+    list-style: none;
+    display: flex;
+    gap: 40px;
+    font-size: 20px;
+    text-shadow: 12px 12px 12px 12px;
+}
+.nav ul li{
+    padding:5px 8px;
+    border-radius: 30px;
+    text-shadow: 2px 2px #000;
+    font-weight: 600;
+    &:hover{
+        /* background-color: #11c048; */
+        animation: color 0.5s ease-in 1ms 1 forwards;
+    }
+}
+@keyframes color {
+    0%{
+        background-color: none;
+    }
+    100%{
+        background-color: #022620;
+    }
+}
+.nav h1{
+    color: rgb(39, 212, 39);
+    border-radius: 3px;
+    padding:5px 8px;
+    background-color: #00000092;
+    /* background-clip: text; */
+    /* -webkit-background-clip: text; */
+}
+.main {
+    background-image: linear-gradient(to right, rgb(2, 2, 2) 1%, rgb(56, 56, 57));
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+.box {
+    position: relative;
+    background-color: #11c048;
+}
+
+.bg {
+    height: inherit;
+    width: inherit;
+}
+
+.bg img {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    object-position: center center;
+    filter: brightness(131%) contrast(151%) saturate(106%);
+    position: absolute;
+}
+
+.cont {
+    width: 100%;
+    height: 100vh;
+    position: absolute;
+    top: 0px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.box1 {
+    /* margin: auto; */
+    margin-bottom: 20px;
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    z-index: 10;
+    min-width: 25vw;
+    max-height: 70vh;
+    border-radius: 15px;
+    box-shadow: 0px -2px 17px 4px hsla(132, 72%, 38%, 0.943);
+    background-color: rgba(8, 9, 7, 0.78);
+    /* backdrop-filter: blur(1px); */
+    animation: glow 4s linear 1ms infinite,
+                effect 1s ease-in-out 1ms 1 reverse;
+    gap: 30px;
+}
+
+.data {
+    display: flex;
+    flex-direction: column;
+    gap: 22px;
+}
+
+.login h1 {
+    font-size: 40px;
+    font-weight: 900;
+    color: transparent;
+    /* background-image: linear-gradient(rgb(27, 187, 59), rgb(4, 149, 38), rgb(138, 180, 109), green); */
+    background-image: var(--my);
+    background-clip: text;
+    -webkit-background-clip: text;
+    text-align: center;
+}
+
+.data input {
+    padding-left: 7px;
+    height: 35px;
+    width: 100%;
+    border: none;
+    border-bottom: 5px solid rgb(11, 131, 73);
+    margin-top: 12px;
+    color: white;
+    background-color: rgba(0, 0, 0, 0.431);
+    animation: effect 1s ease-in-out 1ms 1 reverse;
+
+}
+
+#btn button {
+    height: 50px;
+    width: 100%;
+    font-size: 20px;
+    font-weight: 700;
+    background-color: #11c048;
+    color: white;
+    border: none;
+    border-radius: 22px;
+    cursor: pointer;
+    animation: effect 1s ease-in-out 1ms 1 reverse;
+
+}
+
+.data1 {
+    display: flex;
+    justify-content: space-between;
+    font-size: 12px;
+    animation: effect 1s ease-in-out 1ms 1 reverse;
+
+}
+
+.link a {
+    text-decoration: none;
+    color: rgb(51, 219, 51);
+}
+
+.text {
+    /* margin: auto; */
+    /* margin-bottom: 20px; */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.text span {
+    text-align: center;
+    font-size: 60px;
+    font-weight: 1000;
+    color: transparent;
+    /* background-image: linear-gradient(rgb(27, 187, 59), rgb(4, 149, 38), rgb(138, 180, 109), green); */
+    background-image: var(--my);
+    background-clip: text;
+    -webkit-background-clip: text;
+    animation: effect 1s ease-in-out 1ms 1 reverse;
+
+}
+#btn > button:hover{
+    background-color: #316c42;
+}
+@keyframes glow {
+    0% {
+        box-shadow: 0px -2px 17px 4px hsla(0, 100%, 50%, 0.943);
+    }
+
+    20% {
+        box-shadow: 0px -2px 17px 4px hsla(293, 100%, 50%, 0.943);
+
+    }
+
+    40% {
+        box-shadow: 0px -2px 17px 4px hsla(83, 100%, 50%, 0.943);
+
+    }
+
+    60% {
+        box-shadow: 0px -2px 17px 4px hsla(0, 100%, 50%, 0.943);
+
+    }
+
+    80% {
+        box-shadow: 0px -2px 17px 4px hsla(125, 100%, 51%, 0.943);
+
+    }
+
+    100% {
+        box-shadow: 0px -2px 17px 4px hsla(0, 100%, 50%, 0.943);
+
+    }
+}
+@keyframes effect {
+    from{
+        transform: translatey(0px);
+    }
+    to{
+        transform: translateY(-150px);
+    }
+    
+}
